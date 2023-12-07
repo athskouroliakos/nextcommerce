@@ -1,5 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import { Gutter } from '../../_components/Gutter'
 import { RenderParams } from '../../_components/RenderParams'
@@ -8,8 +10,6 @@ import { mergeOpenGraph } from '../../_utilities/mergeOpenGraph'
 import CreateAccountForm from './CreateAccountForm'
 
 import classes from './index.module.scss'
-import Link from 'next/link'
-import Image from 'next/image'
 
 export default async function CreateAccount() {
   await getMeUser({
@@ -21,7 +21,7 @@ export default async function CreateAccount() {
   return (
     <section className={classes.createAccount}>
       <div className={classes.heroImg}>
-        <Link href="/" className={classes.textlink}>
+        <Link href="/">
           <h3>NextCommerce</h3>
         </Link>
       </div>
